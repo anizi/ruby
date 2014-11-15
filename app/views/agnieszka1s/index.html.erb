@@ -1,0 +1,25 @@
+<h1>Listing agnieszka1s</h1>
+
+<table>
+  <tr>
+    <th>Imie</th>
+    <th>Nazwisko</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @agnieszka1s.each do |agnieszka1| %>
+  <tr>
+    <td><%= agnieszka1.imie %></td>
+    <td><%= agnieszka1.nazwisko %></td>
+    <td><%= link_to 'Show', agnieszka1 %></td>
+    <td><%= link_to 'Edit', edit_agnieszka1_path(agnieszka1) %></td>
+    <td><%= link_to 'Destroy', agnieszka1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Agnieszka1', new_agnieszka1_path %>
